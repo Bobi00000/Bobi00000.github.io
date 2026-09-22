@@ -1,0 +1,124 @@
+.logo {
+    float: left;
+    border-radius: 50%;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.zag {
+    float: left;
+    clear: right;
+    vertical-align: middle;
+}
+
+nav {
+    float: right;
+}
+
+body {
+    margin: 0;
+    font-size: 12pt;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    line-height: 120%;
+    background-color: #fff0f6;
+    color: #4a1942;
+}
+
+header, footer {
+    width: 100%;
+    background-color: #e83e8c;
+    height: 130px;
+    padding: 10px;
+}
+
+.foot-text {
+    font-weight: bold;
+    font-size: 42pt;
+    line-height: 100%;
+    padding-top: 15px;
+    text-align: left;
+    color: white;
+}
+
+.conteiner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.knop {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+.navig {
+    display: block;
+    padding: 27px;
+    background-color: #f7a9d0;
+    border-radius: 6%;
+    text-decoration: none;
+    color: white;
+}
+
+table, th, td {
+    border: 10px solid #d63384;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 20px 60px;
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffb3d9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f783ac;
+}
+
+.centred-list {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 20px;
+    margin: 0;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centered-list li {
+    margin-bottom: 5px;
+}
+
+.centered-table {
+    width: 65%;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+    color: #c2185b;
+}
+
+.centered-form {
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+main {
+    text-align: center;
+}
