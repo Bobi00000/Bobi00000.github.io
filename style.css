@@ -14,7 +14,9 @@ h2 {
     padding-left: 10px;
 }
 
-
+/* ==========================================
+   ШАПКА И ФУТЕР (Мобильная адаптация по умолчанию)
+   ========================================== */
 header, footer {
     width: 100%;
     background-color: #e83e8c;
@@ -75,7 +77,9 @@ nav ul {
     color: white;
 }
 
-
+/* ==========================================
+   ОСНОВНОЙ КОНТЕНТИ И СЕКЦИИ (Flexbox Mobile)
+   ========================================== */
 main {
     text-align: center;
 }
@@ -85,6 +89,7 @@ main .conteiner {
     flex-direction: column;
 }
 
+/* Порядок отображения секций на мобильных */
 .sec-table {
     order: 1;
 }
@@ -97,6 +102,7 @@ main .conteiner {
     order: 3;
 }
 
+/* Элементы контента на мобильных */
 .centred-list,
 .centered-table,
 .centered-form {
@@ -142,6 +148,28 @@ tbody tr:nth-child(even) {
 
 
 
+ul img {
+    max-width:100%;
+}
+
+.block-table {
+    width: 100%;
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 1px solid black;
+}
+
+
+
+
+/* ==========================================
+   MEDIA QUERY (Планшеты и Десктопы: от 768px)
+   ========================================== */
 @media screen and (min-width: 768px) {
     
     /* Адаптация шапки */
