@@ -1,22 +1,3 @@
-.logo {
-    float: left;
-    border-radius: 50%;
-    margin: 10px;
-    width: 100px;
-    height: 100px;
-    vertical-align: middle;
-}
-
-.zag {
-    float: left;
-    clear: right;
-    vertical-align: middle;
-}
-
-nav {
-    float: right;
-}
-
 body {
     margin: 0;
     font-size: 12pt;
@@ -27,50 +8,133 @@ body {
     color: #4a1942;
 }
 
+h2 {
+    text-align: center;
+    color: #c2185b;
+    padding-left: 10px;
+}
+
+/* ==========================================
+   ШАПКА И ФУТЕР (Мобильная адаптация по умолчанию)
+   ========================================== */
 header, footer {
     width: 100%;
     background-color: #e83e8c;
-    height: 130px;
+    box-sizing: border-box;
     padding: 10px;
+}
+
+header .conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.logo {
+    border-radius: 50%;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.zag {
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    background-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.knop {
+    margin: 5px 0;
+}
+
+.navig {
+    display: block;
+    padding: 15px;
+    background-color: #f7a9d0;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
 }
 
 .foot-text {
     font-weight: bold;
-    font-size: 42pt;
+    font-size: 24pt;
     line-height: 100%;
     padding-top: 15px;
     text-align: left;
     color: white;
 }
 
-.conteiner {
-    max-width: 960px;
-    margin: 0 auto;
+/* ==========================================
+   ОСНОВНОЙ КОНТЕНТИ И СЕКЦИИ (Flexbox Mobile)
+   ========================================== */
+main {
+    text-align: center;
 }
 
-.knop {
+main .conteiner {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Порядок отображения секций на мобильных */
+.sec-table {
+    order: 1;
+}
+
+.sec-links {
+    order: 2;
+}
+
+.sec-form {
+    order: 3;
+}
+
+/* Элементы контента на мобильных */
+.centred-list,
+.centered-table,
+.centered-form {
+    width: 100%;
+    max-width: none;
     margin: 0;
-    padding: 0;
-    list-style: none;
-    display: inline-block;
 }
 
-.navig {
-    display: block;
-    padding: 27px;
-    background-color: #f7a9d0;
-    border-radius: 6%;
-    text-decoration: none;
-    color: white;
+.centred-list {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 20px;
+    text-align: left;
 }
 
+.centered-list li {
+    margin-bottom: 5px;
+}
+
+.centered-form {
+    padding: 0 15px 10px;
+    box-sizing: border-box;
+}
+
+/* Таблицы */
 table, th, td {
-    border: 10px solid #d63384;
+    border: 5px solid #d63384;
     border-collapse: collapse;
 }
 
 th, td {
-    padding: 20px 60px;
+    padding: 10px 15px;
     text-align: left;
 }
 
@@ -82,43 +146,72 @@ tbody tr:nth-child(even) {
     background-color: #f783ac;
 }
 
-.centred-list {
-    list-style-type: disc;
-    list-style-position: outside;
-    padding-left: 20px;
-    margin: 0;
-    text-align: left;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.centered-list li {
-    margin-bottom: 5px;
-}
+/* ==========================================
+   MEDIA QUERY (Планшеты и Десктопы: от 768px)
+   ========================================== */
+@media screen and (min-width: 768px) {
+    
+    /* Адаптация шапки */
+    header .conteiner {
+        flex-wrap: nowrap;
+    }
 
-.centered-table {
-    width: 65%;
-    margin: 20px auto;
-}
+    h2 {
+        padding-left: 0;
+    }
 
-h2 {
-    text-align: center;
-    color: #c2185b;
-}
+    nav {
+        width: auto;
+        margin-left: auto; /* Прижимает меню к правому краю */
+    }
 
-.centered-form {
-    max-width: 600px;
-    margin: 10px auto;
-}
+    nav ul {
+        flex-direction: row;
+        padding-right: 10px;
+    }
 
+    .knop {
+        margin: 0 5px;
+    }
 
-main {
-    max-width: 960px;
-    margin: 0 auto;
-}
+    .navig {
+        padding: 15px 25px;
+    }
 
+    /* Сброс Flex-порядка и ограничение ширины контейнера */
+    main .conteiner {
+        display: block; /* Секции встают в естественный порядок HTML */
+    }
 
-main {
-    text-align: center;
+    main .conteiner,
+    footer .conteiner {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    /* Настройки ширины и отступов блоков для ПК */
+    .centred-list {
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    .centered-table {
+        width: 65%;
+        margin: 20px auto;
+    }
+
+    .centered-form {
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    th, td {
+        padding: 20px 40px;
+        border-width: 10px;
+    }
+
+    .foot-text {
+        font-size: 42pt;
+    }
 }
