@@ -25,214 +25,228 @@
 
     <section id="links" class="block"></section>
     <h2>Список Ссылок</h2>
+
+    <div class="content">
+
+        <main>
+            <h1>
+                Задание 1
+            </h1>
+
+            <ul>
+                <li><a id="first" href="http://kubsu.ru/">1.Кубгу</a></li>
+
+                <li><a href="https://kubsu.ru/">2.КубГУ</a></li>
+
+                <li><a href="https://kubsu.ru/"><img src="image.jpg" alt="цветок"></a></li>
+
+                <li><a href="/fore.html">4.Сокращенная ссылка на внутреннюю страницу</a></li>
+
+                <li><a href="/">5.Сокращенная ссылка на главную страницу</a></li>
+
+                <li><a href="#first">6.Докручивание до ссылку Кубгу на текущей странице</a></li>
+
+                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&index=1">7.Ссылка с тремя параметрами</a></li>
+
+                <li><a href="index.html?id=123">8.Ссылка с параметром ID</a></li>
+
+                <li><a href="./contact.html">9.Относительная ссылка на страницу в текущем каталоге</a></li>
+
+                <li><a href="./about/imya_novoy stranisi">10.Относительная ссылка на страницу в каталоге about</a></li>
+
+                <li><a href="../index.html">11.Относительная ссылка на страницу в каталоге выше уровнем </a></li>
+
+                <li><a href="../../index.html">12.Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+
+                <li>13. Доступен <a href="https://kubsu.ru">Сайт КубГУ </a></li>
+
+                <p>Официальный сайт университета — <a href="https://kubsu.ru/">КубГУ</a>задание 13</p>
+
+                <li><a
+                        href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BD%D1%8C_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D0%B0#cite_note-1">14.Ссылка
+                        на фрагмент сайта
+                </a></li>
+
+                <p style="font-size: 20px;">15.Сылка в прямоугольнике и в круге</p>
+
+                <img src="map.png" alt="Карта" usemap="#map">
+
+                <map name="map">
+                    <!-- Прямоугольник -->
+                    <area shape="rect" coords="30,105,425,270" href="https://kubsu.ru/" alt="Прямоугольник">
+
+                    <!-- Круг/эллипс -->
+                    <area shape="ellipse" coords="507,185,56,87" href="./second.html" alt="Круг">
+                </map>
+
+                <li><a href="">16.Ссылка с пустым href</a></li>
+
+                <li><a>17.Ссылка без href</a></li>
+
+                <li><a href="https://kubsu.ru/" rel="nofollow">18.Ссылка, по которой запрещен переход поисковикам</a></li>
+
+                <li><a href="https://kubsu.ru" rel="noindex nofollow">19.Ссылка, запрещенная для индексации</a></li>
+
+                <li>
+                    "20.Нумерованный список ссылок с подписями title"
+                    <ol>
+                        <li> <a href="https://www.google.com/"> Google</a>
+                        <li> <a href="https://ya.ru/">Yandex</a>
+                    </ol>
+                </li>
+
+                <li><a href="ftp://login:password@server/file.pdf">21.Ссылка на FTP с авторизацией</a></li>
+
+            </ul>
+
+            <section id="table" class="block"></section>
+
+            <h2>Таблица</h2>
+
+            <div class="block-table">
+                <table class="centered-table">
+                    <thead>
+                    <tbody>
+                        <tr class="odd">
+                            <td colspan="2">Элемент</td>
+                            <th>Элемент</th>
+                            <th>Элемент</th>
+                        </tr>
+                    </tbody>
+                    </thead>
+                    <tbody>
+                        <tr class="even">
+                            <td>строка1</td>
+                            <td>столбец1</td>
+                            <td>столбец2</td>
+                            <td>столбец3</td>
+                        </tr>
+                        <tr class="even">
+                            <td>строка2</td>
+                            <td>столбец1</td>
+                            <td>столбец2</td>
+                            <td>столбец3</td>
+                        </tr>
+                        <tr class="even">
+                            <td>сторка3</td>
+                            <td>столбец1</td>
+                            <td>столбец2</td>
+                            <td>столбец3</td>
+                        </tr>
+                        <tr class="odd">
+                            <td>сторка4</td>
+                            <td>столбец1</td>
+                            <td>столбец2</td>
+                            <td>столбец3</td>
+                        </tr>
+                        <tr class="even">
+                            <td>сторка5</td>
+                            <td>столбец1</td>
+                            <td>столбец2</td>
+                            <td>столбец3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <section id="form" class="block"></section>
+
+            <h2>ФОРМЫ</h2>
+
+            <form action="/" method="POST">
+                <label>
+                    Напишите ФИО:
+                    <br>
+                    <!-- Ограничение: только буквы (русские/английские) и пробелы -->
+                    <input type="text" id="fio" name="field-name-1" placeholder="Введите ФИО" oninput="this.value = this.value.replace(/[^A-Za-zА-Яа-яЁё\s]/g, '')" required>
+                </label><br>
+
+                <label>
+                    <br>
+                    Телефон:<br>
+                    <!-- Ограничение: только цифры, плюсы, скобки, пробелы и дефисы -->
+                    <input name="field-number-1" id="phone" type="tel" placeholder="напишите телефон" 
+                           pattern="[\+0-9\s\-\(\)]+" 
+                           oninput="this.value = this.value.replace(/[^0-9\+\s\-\(\)]/g, '')" required>
+                </label><br>
+
+
+                <label>
+                    Email: <br>
+                    <input type="email" name="field-email" placeholder="Введите email">
+                </label><br>
+
+
+                <label>Укажите дату рождения:<br>
+                    <!-- Ограничение: максимум — сегодня -->
+                    <input name="field-date" id="birthdate" type="date">
+                </label>
+                <br>
+
+
+                <label> Укажите ваш пол:<br>
+                    <input type="radio" checked="checked" name="radio-group-1" value="male"> Мужской
+                </label>
+
+
+                <label>
+                    <input type="radio" name="radio-group-1" value="female"> Женский
+                </label><br>
+
+
+                <label>
+                    Ваш любимый язык программирования:<br>
+                    <select name="field-proglang[]" multiple="multiple">
+                        <option value="Значение1" selected="selected">Pascal</option>
+                        <option value="Значение2">C</option>
+                        <option value="Значение3">C++</option>
+                        <option value="Значение4">Javascript</option>
+                        <option value="Значение5">PHP</option>
+                        <option value="Значение6">Python</option>
+                        <option value="Значение7">Java</option>
+                        <option value="Значение8">Haskel</option>
+                        <option value="Значение9">Clojure</option>
+                        <option value="Значение9">Prolog</option>
+                        <option value="Значение10">Scala</option>
+                    </select>
+                </label><br>
+
+
+                <label>
+                    Напишите свою биографию<br>
+                    <textarea name="field-name-2">начальное значение</textarea>
+                </label><br>
+
+
+                <label>
+                    <input type="checkbox" name="field-contract" value="yes" required>С контрактом ознакомлен(а)
+                </label><br>
+
+
+                <input type="submit" value="Сохранить">
+            </form>
+
+        </main>
     </div>
 
-<div class="content">
-
-    <main>
-        <h1>
-            Задание 1
-        </h1>
-
-        <ul>
-            <li><a id="first" href="http://kubsu.ru/">1.Кубгу</a></li>
-
-            <li><a href="https://kubsu.ru/">2.КубГУ</a></li>
-
-            <li><a href="https://kubsu.ru/"><img src="image.jpg" alt="цветок"></a></li>
-
-            <li><a href="/fore.html">4.Сокращенная ссылка на внутреннюю страницу</a></li>
-
-            <li><a href="/">5.Сокращенная ссылка на главную страницу</a></li>
-
-            <li><a href="#first">6.Докручивание до ссылку Кубгу на текущей странице</a></li>
-
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&index=1">7.Ссылка с тремя
-                    параметрами</a></li>
-
-            <li><a href="index.html?id=123">8.Ссылка с параметром ID</a></li>
-
-            <li><a href="./contact.html">9.Относительная ссылка на страницу в текущем каталоге</a></li>
-
-            <li><a href="./about/imya_novoy stranisi">10.Относительная ссылка на страницу в каталоге about</a></li>
-
-            <li><a href="../index.html">11.Относительная ссылка на страницу в каталоге выше уровнем </a></li>
-
-            <li><a href="../../index.html">12.Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
-
-            <li>13. Доступен <a href="https://kubsu.ru">Сайт КубГУ </a></li>
-
-            <p>Официальный сайт университета — <a href="https://kubsu.ru/">КубГУ</a>задание 13</p>
-
-            <li><a
-                    href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BD%D1%8C_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D0%B0#cite_note-1">14.Ссылка
-                    на фрагмент сайта</a></li>
-
-            <p style="font-size: 20px;">15.Сылка в прямоугольнике и в круге</p>
-            <img src="map.png" alt="Карта" usemap="#map">
-            <map name="map">
-                <!-- Прямоугольник -->
-                <area shape="rect" coords="30,105,425,270" href="https://kubsu.ru/" alt="Прямоугольник">
-
-                <!-- Круг/эллипс -->
-                <area shape="ellipse" coords="507,185,56,87" href="./second.html" alt="Круг">
-            </map>
-
-
-
-
-
-            <li><a href="">16.Ссылка с пустым href</a></li>
-
-            <li><a>17.Ссылка без href</a></ли>
-
-            <li><a href="https://kubsu.ru/" rel="nofollow">18.Ссылка, по которой запрещен переход поисковикам</a></li>
-
-            <li><a href="https://kubsu.ru" rel="noindex nofollow">19.Ссылка, запрещенная для индексации</a></li>
-
-            <li>
-                "20.Нумерованный список ссылок с подписями title"
-                <ol>
-                    <li> <a href="https://www.google.com/"> Google</a>
-                    <li> <a href="https://ya.ru/">Yandex</a>
-                </ol>
-            </li>
-
-            <li><a href="ftp://login:password@server/file.pdf">21.Ссылка на FTP с авторизацией</a></li>
-
-        </ul>
-
-
-
-        <section id="table" class="block"></section>
-        <h2>Таблица</h2>
-        <div class="block-table">
-            <table class="centered-table">
-                <thead>
-                <tbody>
-                    <tr class="odd">
-                        <td colspan="2"> Элемент</th>
-                        <th>Элемент</th>
-                        <th>Элемент</th>
-                    </tr>
-                    </thead>
-                    <tr class="even">
-                        <td>строка1</td>
-                        <td>столбец1</td>
-                        <td>столбец2</td>
-                        <td>столбец3</td>
-                    </tr>
-                    <tr class="even">
-                        <td>строка2</td>
-                        <td>столбец1</td>
-                        <td>столбец2</td>
-                        <td>столбец3</td>
-                    </tr>
-                    <tr class="even">
-                        <td>сторка3</td>
-                        <td>столбец1</td>
-                        <td>столбец2</td>
-                        <td>столбец3</td>
-                    </tr>
-                    <tr class="odd">
-                        <td>сторка4</td>
-                        <td>столбец1</td>
-                        <td>столбец2</td>
-                        <td>столбец3</td>
-                    </tr>
-                    <tr class="even">
-                        <td>сторка5</td>
-                        <td>столбец1</td>
-                        <td>столбец2</td>
-                        <td>столбец3</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-
-
-        <!-- формы -->
-        <section id="form" class="block"></section>
-        <h2>ФОРМЫ</h2>
-        <form action="/" method="POST">
-            <label>
-                Напишите ФИО:
-                <br>
-                <input type="text" name="field-name-1" placeholder="Введите ФИО">
-            </label><br>
-
-            <label>
-                <br>
-                "телефон: "<br>
-                <input name="field-number-1" type="tel" placeholder="напишите телефон">
-            </label><br>
-
-            <label>
-                Email: <br>
-                <input type="email" name="field-email" placeholder="Введите email">
-            </label><br>
-
-
-            <label>Укажите дату рождения:<br>
-                <input name="field-date" type="date">
-            </label>
-            <br>
-
-            <label> Укажите ваш пол:<br>
-                <input type="radio" checked="checked" name="radio-group-1" value="male"> Мужской
-            </label>
-            <label>
-                <input type="radio" name="radio-group-1" value="female"> Женский
-            </label><br>
-
-            <label>
-                "Ваш любимый язык программирования:"<br>
-                <select name="field-proglang[]" multiple="multiple">
-                    <option value="Значение1" selected="selected">Pascal</option>slot
-                    <option value="Значение2" selected="selected">C</option>slot
-                    <option value="Значение3" selected="selected">C++</option>slot
-                    <option value="Значение4" selected="selected">Javascript</option>slot
-                    <option value="Значение5" selected="selected">PHP</option>slot
-                    <option value="Значение6" selected="selected">Python</option>slot
-                    <option value="Значение7" selected="selected">Java</option>slot
-                    <option value="Значение8" selected="selected">Haskel</option>slot
-                    <option value="Значение9" selected="selected">Clojure</option>slot
-                    <option value="Значение9" selected="selected">Prolog</option>slot
-                    <option value="Значение10" selected="selected">Scala</option>slot
-                </select>
-            </label><br>
-
-            <label>
-                "Напишите свою биографию"<br>
-                <textarea name="field-name-2">начальное значение</textarea>
-            </label><br>
-
-
-            <label>
-                <input type="checkbox" name="field-contract" value="yes">С контрактом ознакомлен(а)
-            </label><br>
-
-            <input type="submit" value="Сохранить">
-        </form>
-
-
-
-
-        <body style="margin:0;">
-            <div style="width:100%; background-colo
-    r:#ccc; padding: 1px; height:100px;">
-
-
-    </main>
-</div>
+    
     <footer>
         <div class="conteiner">
             <p class="foot-text">(c) Bobi00000</p>
         </div>
     </footer>
 
-
+    <!-- Скрипт для ограничения максимальной даты сегодня -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dateInput = document.getElementById('birthdate');
+            if (dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.max = today;
+            }
+        });
+    </script>
 </body>
 
 </html>
