@@ -4,240 +4,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 1</title>
+    <title>Задание — Розовый стиль</title>
+    <!-- Подключение Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Пользовательские стили для розового оформления -->
+    <style>
+        body {
+            background-color: #ffe6f0 !important; /* Светло-розовый фон страницы */
+        }
+        .header-pink {
+            background-color: #ff66a3 !important; /* Ярко-розовая шапка */
+        }
+        .card-pink {
+            background-color: #ffffff;
+            border: 2px solid #ffb3d1 !important;
+            border-radius: 12px;
+        }
+        .btn-pink {
+            background-color: #ff4d94 !important;
+            color: #fff !important;
+            border: none;
+        }
+        .btn-pink:hover {
+            background-color: #e6005c !important;
+        }
+        .table-pink-header {
+            background-color: #ff99c2 !important;
+            color: white;
+        }
+        .nav-pink-link {
+            color: white !important;
+            font-weight: 500;
+        }
+        .nav-pink-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        a {
+            color: #d6006e;
+        }
+        a:hover {
+            color: #99004d;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <div class="conteiner">
-            <img class="logo" src="logo.jpg" alt="Наш лого" />
-            <h1 class="zag">Задание 2</h1>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Шапка (Розовая) -->
+    <header class="header-pink text-white py-3 shadow-sm mb-4">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <img class="logo rounded" src="logo.jpg" alt="Наш лого" style="max-height: 50px;">
+                <h1 class="h3 m-0">Задание 4</h1>
+            </div>
             <nav>
-                <ul>
-                    <li class="knop"><a href="#links" class="navig">Список</a></li>
-                    <li class="knop"><a href="#table" class="navig">Таблица</a></li>
-                    <li class="knop"><a href="#form" class="navig">Форма</a></li>
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#links" class="nav-link nav-pink-link">Список</a></li>
+                    <li class="nav-item"><a href="#table" class="nav-link nav-pink-link">Таблица</a></li>
+                    <li class="nav-item"><a href="#form" class="nav-link nav-pink-link">Форма</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="links" class="block"></section>
-    <h2>Список Ссылок</h2>
+    <!-- Основной контент по сетке Mobile First -->
+    <main class="container flex-grow-1 mb-5">
+        <div class="row g-4">
 
-    <div class="content">
-
-        <main>
-            <h1>
-                Задание 1
-            </h1>
-
-            <ul>
-                <li><a id="first" href="http://kubsu.ru/">1.Кубгу</a></li>
-
-                <li><a href="https://kubsu.ru/">2.КубГУ</a></li>
-
-                <li><a href="https://kubsu.ru/"><img src="image.jpg" alt="цветок"></a></li>
-
-                <li><a href="/fore.html">4.Сокращенная ссылка на внутреннюю страницу</a></li>
-
-                <li><a href="/">5.Сокращенная ссылка на главную страницу</a></li>
-
-                <li><a href="#first">6.Докручивание до ссылку Кубгу на текущей странице</a></li>
-
-                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&index=1">7.Ссылка с тремя параметрами</a></li>
-
-                <li><a href="index.html?id=123">8.Ссылка с параметром ID</a></li>
-
-                <li><a href="./contact.html">9.Относительная ссылка на страницу в текущем каталоге</a></li>
-
-                <li><a href="./about/imya_novoy stranisi">10.Относительная ссылка на страницу в каталоге about</a></li>
-
-                <li><a href="../index.html">11.Относительная ссылка на страницу в каталоге выше уровнем </a></li>
-
-                <li><a href="../../index.html">12.Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
-
-                <li>13. Доступен <a href="https://kubsu.ru">Сайт КубГУ </a></li>
-
-                <p>Официальный сайт университета — <a href="https://kubsu.ru/">КубГУ</a>задание 13</p>
-
-                <li><a
-                        href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BD%D1%8C_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D0%B0#cite_note-1">14.Ссылка
-                        на фрагмент сайта
-                </a></li>
-
-                <p style="font-size: 20px;">15.Сылка в прямоугольнике и в круге</p>
-
-                <img src="map.png" alt="Карта" usemap="#map">
-
-                <map name="map">
-                    <!-- Прямоугольник -->
-                    <area shape="rect" coords="30,105,425,270" href="https://kubsu.ru/" alt="Прямоугольник">
-
-                    <!-- Круг/эллипс -->
-                    <area shape="ellipse" coords="507,185,56,87" href="./second.html" alt="Круг">
-                </map>
-
-                <li><a href="">16.Ссылка с пустым href</a></li>
-
-                <li><a>17.Ссылка без href</a></li>
-
-                <li><a href="https://kubsu.ru/" rel="nofollow">18.Ссылка, по которой запрещен переход поисковикам</a></li>
-
-                <li><a href="https://kubsu.ru" rel="noindex nofollow">19.Ссылка, запрещенная для индексации</a></li>
-
-                <li>
-                    "20.Нумерованный список ссылок с подписями title"
-                    <ol>
-                        <li> <a href="https://www.google.com/"> Google</a>
-                        <li> <a href="https://ya.ru/">Yandex</a>
+            <!-- Блок с ссылками -->
+            <section id="links" class="col-12 col-lg-8">
+                <div class="card card-pink shadow-sm p-4 h-100">
+                    <h2 class="card-title h4 mb-3 border-bottom pb-2 text-danger-emphasis">Список ссылок</h2>
+                    <ol class="list-group list-group-numbered mb-3">
+                        <li class="list-group-item"><a id="first" href="http://kubsu.ru/">Кубгу (http)</a></li>
+                        <li class="list-group-item"><a href="https://kubsu.ru/">КубГУ (https)</a></li>
+                        <li class="list-group-item"><a href="https://kubsu.ru/"><img src="image.jpg" alt="цветок" class="img-fluid rounded" style="max-width: 100px;"></a></li>
+                        <li class="list-group-item"><a href="/fore.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+                        <li class="list-group-item"><a href="/">Сокращенная ссылка на главную страницу</a></li>
+                        <li class="list-group-item"><a href="#first">Докручивание до ссылки Кубгу на текущей странице</a></li>
+                        <li class="list-group-item"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&index=1">Ссылка с тремя параметрами</a></li>
+                        <li class="list-group-item"><a href="index.html?id=123">Ссылка с параметром ID</a></li>
+                        <li class="list-group-item"><a href="./contact.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+                        <li class="list-group-item"><a href="./about/imya_novoy_stranisi">Относительная ссылка на страницу в каталоге about</a></li>
+                        <li class="list-group-item"><a href="../index.html">Относительная ссылка на страницу в каталоге выше уровнем</a></li>
+                        <li class="list-group-item"><a href="../../index.html">Относительная ссылка на страницу двумя уровнями выше</a></li>
+                        <li class="list-group-item">Доступен <a href="https://kubsu.ru">Сайт КубГУ</a></li>
+                        <li class="list-group-item"><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BD%D1%8C_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D0%B0#cite_note-1">Ссылка на фрагмент сайта</a></li>
+                        <li class="list-group-item">
+                            <p class="mb-2">Ссылка в прямоугольнике и в круге:</p>
+                            <img src="map.png" alt="Карта" usemap="#map" class="img-fluid border rounded">
+                            <map name="map">
+                                <area shape="rect" coords="30,105,425,270" href="https://kubsu.ru/" alt="Прямоугольник">
+                                <area shape="ellipse" coords="507,185,56,87" href="./second.html" alt="Круг">
+                            </map>
+                        </li>
+                        <li class="list-group-item"><a href="">Ссылка с пустым href</a></li>
+                        <li class="list-group-item"><a>Ссылка без href</a></li>
+                        <li class="list-group-item"><a href="https://kubsu.ru/" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+                        <li class="list-group-item"><a href="https://kubsu.ru" rel="noindex nofollow">Ссылка, запрещенная для индексации</a></li>
+                        <li class="list-group-item">
+                            Нумерованный список ссылок с подписями title:
+                            <ul class="mt-2">
+                                <li><a href="https://www.google.com/" title="Поисковая система Google">Google</a></li>
+                                <li><a href="https://ya.ru/" title="Поисковая система Яндекс">Yandex</a></li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><a href="ftp://login:password@server/file.pdf">Ссылка на FTP с авторизацией</a></li>
                     </ol>
-                </li>
+                </div>
+            </section>
 
-                <li><a href="ftp://login:password@server/file.pdf">21.Ссылка на FTP с авторизацией</a></li>
+            <!-- Правая колонка -->
+            <div class="col-12 col-lg-4 d-flex flex-column gap-4">
 
-            </ul>
+                <!-- Блок с таблицей -->
+                <section id="table" class="card card-pink shadow-sm p-4">
+                    <h2 class="card-title h4 mb-3 border-bottom pb-2">Таблица</h2>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover m-0">
+                            <thead class="table-pink-header">
+                                <tr>
+                                    <th colspan="2">Элемент</th>
+                                    <th>Элемент</th>
+                                    <th>Элемент</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>строка1</td>
+                                    <td>столбец1</td>
+                                    <td>столбец2</td>
+                                    <td>столбец3</td>
+                                </tr>
+                                <tr>
+                                    <td>строка2</td>
+                                    <td>столбец1</td>
+                                    <td>столбец2</td>
+                                    <td>столбец3</td>
+                                </tr>
+                                <tr>
+                                    <td>строка3</td>
+                                    <td>столбец1</td>
+                                    <td>столбец2</td>
+                                    <td>столбец3</td>
+                                </tr>
+                                <tr>
+                                    <td>строка4</td>
+                                    <td>столбец1</td>
+                                    <td>столбец2</td>
+                                    <td>столбец3</td>
+                                </tr>
+                                <tr>
+                                    <td>строка5</td>
+                                    <td>столбец1</td>
+                                    <td>столбец2</td>
+                                    <td>столбец3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
 
-            <section id="table" class="block"></section>
+                <!-- Блок с формой -->
+                <section id="form" class="card card-pink shadow-sm p-4 flex-grow-1">
+                    <h2 class="card-title h4 mb-3 border-bottom pb-2">Форма</h2>
+                    <form action="/" method="POST" class="d-flex flex-column gap-3">
 
-            <h2>Таблица</h2>
+                        <div>
+                            <label for="fio" class="form-label fw-bold">ФИО:</label>
+                            <input type="text" id="fio" name="field-name-1" class="form-control" placeholder="Введите ФИО" oninput="this.value = this.value.replace(/[^A-Za-zА-Яа-яЁё\s]/g, '')" required>
+                        </div>
 
-            <div class="block-table">
-                <table class="centered-table">
-                    <thead>
-                    <tbody>
-                        <tr class="odd">
-                            <td colspan="2">Элемент</td>
-                            <th>Элемент</th>
-                            <th>Элемент</th>
-                        </tr>
-                    </tbody>
-                    </thead>
-                    <tbody>
-                        <tr class="even">
-                            <td>строка1</td>
-                            <td>столбец1</td>
-                            <td>столбец2</td>
-                            <td>столбец3</td>
-                        </tr>
-                        <tr class="even">
-                            <td>строка2</td>
-                            <td>столбец1</td>
-                            <td>столбец2</td>
-                            <td>столбец3</td>
-                        </tr>
-                        <tr class="even">
-                            <td>сторка3</td>
-                            <td>столбец1</td>
-                            <td>столбец2</td>
-                            <td>столбец3</td>
-                        </tr>
-                        <tr class="odd">
-                            <td>сторка4</td>
-                            <td>столбец1</td>
-                            <td>столбец2</td>
-                            <td>столбец3</td>
-                        </tr>
-                        <tr class="even">
-                            <td>сторка5</td>
-                            <td>столбец1</td>
-                            <td>столбец2</td>
-                            <td>столбец3</td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <div>
+                            <label for="phone" class="form-label fw-bold">Телефон:</label>
+                            <input name="field-number-1" id="phone" type="tel" class="form-control" placeholder="+7 (999) 000-00-00" pattern="[\+0-9\s\-\(\)]+" oninput="this.value = this.value.replace(/[^0-9\+\s\-\(\)]/g, '')" required>
+                        </div>
+
+                        <div>
+                            <label for="email" class="form-label fw-bold">Email:</label>
+                            <input type="email" id="email" name="field-email" class="form-control" placeholder="example@mail.ru">
+                        </div>
+
+                        <div>
+                            <label for="birthdate" class="form-label fw-bold">Дата рождения:</label>
+                            <input name="field-date" id="birthdate" type="date" class="form-control">
+                        </div>
+
+                        <div>
+                            <label class="form-label fw-bold d-block">Пол:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" checked name="radio-group-1" id="gender-male" value="male">
+                                <label class="form-check-label" for="gender-male">Мужской</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="radio-group-1" id="gender-female" value="female">
+                                <label class="form-check-label" for="gender-female">Женский</label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="proglang" class="form-label fw-bold">Любимый язык программирования:</label>
+                            <select id="proglang" name="field-proglang[]" class="form-select" multiple aria-label="Выберите языки">
+                                <option value="Pascal" selected>Pascal</option>
+                                <option value="C">C</option>
+                                <option value="C++">C++</option>
+                                <option value="JavaScript">JavaScript</option>
+                                <option value="PHP">PHP</option>
+                                <option value="Python">Python</option>
+                                <option value="Java">Java</option>
+                                <option value="Haskell">Haskell</option>
+                                <option value="Clojure">Clojure</option>
+                                <option value="Prolog">Prolog</option>
+                                <option value="Scala">Scala</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="bio" class="form-label fw-bold">Биография:</label>
+                            <textarea id="bio" name="field-name-2" class="form-control" rows="3">Начальное значение</textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="field-contract" id="contract" value="yes" required>
+                            <label class="form-check-label" for="contract">С контрактом ознакомлен(а)</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-pink py-2 fw-bold">Сохранить</button>
+                    </form>
+                </section>
+
             </div>
+        </div>
+    </main>
 
-
-            <section id="form" class="block"></section>
-
-            <h2>ФОРМЫ</h2>
-
-            <form action="/" method="POST">
-                <label>
-                    Напишите ФИО:
-                    <br>
-                    <!-- Ограничение: только буквы (русские/английские) и пробелы -->
-                    <input type="text" id="fio" name="field-name-1" placeholder="Введите ФИО" oninput="this.value = this.value.replace(/[^A-Za-zА-Яа-яЁё\s]/g, '')" required>
-                </label><br>
-
-                <label>
-                    <br>
-                    Телефон:<br>
-                    <!-- Ограничение: только цифры, плюсы, скобки, пробелы и дефисы -->
-                    <input name="field-number-1" id="phone" type="tel" placeholder="напишите телефон" 
-                           pattern="[\+0-9\s\-\(\)]+" 
-                           oninput="this.value = this.value.replace(/[^0-9\+\s\-\(\)]/g, '')" required>
-                </label><br>
-
-
-                <label>
-                    Email: <br>
-                    <input type="email" name="field-email" placeholder="Введите email">
-                </label><br>
-
-
-                <label>Укажите дату рождения:<br>
-                    <!-- Ограничение: максимум — сегодня -->
-                    <input name="field-date" id="birthdate" type="date">
-                </label>
-                <br>
-
-
-                <label> Укажите ваш пол:<br>
-                    <input type="radio" checked="checked" name="radio-group-1" value="male"> Мужской
-                </label>
-
-
-                <label>
-                    <input type="radio" name="radio-group-1" value="female"> Женский
-                </label><br>
-
-
-                <label>
-                    Ваш любимый язык программирования:<br>
-                    <select name="field-proglang[]" multiple="multiple">
-                        <option value="Значение1" selected="selected">Pascal</option>
-                        <option value="Значение2">C</option>
-                        <option value="Значение3">C++</option>
-                        <option value="Значение4">Javascript</option>
-                        <option value="Значение5">PHP</option>
-                        <option value="Значение6">Python</option>
-                        <option value="Значение7">Java</option>
-                        <option value="Значение8">Haskel</option>
-                        <option value="Значение9">Clojure</option>
-                        <option value="Значение9">Prolog</option>
-                        <option value="Значение10">Scala</option>
-                    </select>
-                </label><br>
-
-
-                <label>
-                    Напишите свою биографию<br>
-                    <textarea name="field-name-2">начальное значение</textarea>
-                </label><br>
-
-
-                <label>
-                    <input type="checkbox" name="field-contract" value="yes" required>С контрактом ознакомлен(а)
-                </label><br>
-
-
-                <input type="submit" value="Сохранить">
-            </form>
-
-        </main>
-    </div>
-
-    
-    <footer>
-        <div class="conteiner">
-            <p class="foot-text">(c) Bobi00000</p>
+    <!-- Подвал -->
+    <footer class="header-pink text-white text-center py-3 mt-auto">
+        <div class="container">
+            <p class="m-0">&copy; Bobi00000</p>
         </div>
     </footer>
 
-    <!-- Скрипт для ограничения максимальной даты сегодня -->
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const dateInput = document.getElementById('birthdate');
