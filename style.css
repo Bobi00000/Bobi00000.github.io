@@ -81,7 +81,7 @@ nav ul {
    ОСНОВНОЙ КОНТЕНТИ И СЕКЦИИ (Flexbox Mobile)
    ========================================== */
 main {
-    text-align: center;
+    /*text-align: center;*/
 }
 
 main .conteiner {
